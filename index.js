@@ -146,4 +146,32 @@ const PLAN_DEFINITIONS = Object.freeze({
     },
 });
 
-module.exports = { PLAN_DEFINITIONS, PLAN_MODULES };
+/**
+ * FEATURE_MAP — bildet CMS-interne Feature-IDs auf Lizenz-Modul-Namen ab.
+ * Wert null = immer verfügbar, kein Lizenz-Gate.
+ */
+const FEATURE_MAP = Object.freeze({
+    // CMS-Features mit eigenem Namen → Lizenz-Modul
+    kitchen_display:    'orders_kitchen',
+    table_planner:      'reservations',
+    menu_translate:     'multilanguage',
+    // 1:1-Mappings (gleicher Name)
+    menu_edit:          'menu_edit',
+    orders_kitchen:     'orders_kitchen',
+    reservations:       'reservations',
+    custom_design:      'custom_design',
+    analytics:          'analytics',
+    qr_pay:             'qr_pay',
+    online_orders:      'online_orders',
+    multilanguage:      'multilanguage',
+    seasonal_menu:      'seasonal_menu',
+    backup:             'backup',
+    image_ai:           'image_ai',
+    // Immer verfügbar — kein Lizenz-Gate
+    daily_specials:     null,
+    menu_import_export: null,
+    qrcodes:            null,
+    shifts:             null,
+});
+
+module.exports = { PLAN_DEFINITIONS, PLAN_MODULES, FEATURE_MAP };

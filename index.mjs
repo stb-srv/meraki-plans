@@ -1,3 +1,3 @@
 // ESM-Wrapper für @meraki/plans (wird von meraki-licens verwendet)
 import plans from './index.js';
-export const { PLAN_DEFINITIONS, PLAN_MODULES } = plans;
+export const { PLAN_DEFINITIONS, PLAN_MODULES, FEATURE_MAP } = plans;
